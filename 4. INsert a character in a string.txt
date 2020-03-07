@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+    char a[100];
+    char ch;
+    int p;
+    int i;
+    i=strlen(a);
+    printf("Enter the characters: ");
+    gets(a);
+    printf("\n\nEnter the character you want to insert: ");
+    ch=getchar();
+    fflush(stdin);
+    printf("\n\nenter the location: ");
+    scanf("%d",&p);
+
+    for(;i>=p;i--)
+        {
+            a[i+1]=a[i];
+        }
+        a[p]=ch;
+    puts(a);
+    getch();
+}

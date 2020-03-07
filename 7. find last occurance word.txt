@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+   int i,j=0,index=0;
+   char a[]={"hello aryan ar"};
+   char b[] = {"ar"};
+
+   for(i=0;a[i]!='\0';i++)
+   {
+       if(a[i]==b[j])
+       {
+           j++;
+       }
+       else if(a[i]==b[0])
+       {
+           j=1;
+       }
+       else
+       {
+           j=0;
+       }
+       if(b[j]=='\0')
+       {
+           index=i+1-j;
+           j=0;
+       }
+
+   }
+  printf("%s found at index: %d",b,index);
+
+}

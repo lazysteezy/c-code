@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[] = {"i love paris love"};
+    char b[]={"love"};
+    int i,j,index=0;
+    int len,k;
+    j=0;
+   for(i=0;a[i]!='\0';i++)
+   {
+       if(a[i]==b[j])
+       {
+           j++;
+       }
+       else if(a[i]==b[0])
+       {
+           j=1;
+       }
+       else
+       {
+           j=0;
+       }
+       if(b[j]=='\0')
+       {
+           i =i+1-j;
+            for(k=i;a[k]=a[k+j];k++);
+            j=0;
+       }
+   }
+
+
+
+
+   printf("%s",a);
+
+
+}
+
+
+
